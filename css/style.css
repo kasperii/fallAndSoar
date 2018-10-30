@@ -483,10 +483,10 @@ header nav a:hover {
   color: black;
 }
 header .logo-mid {
-  height: 50px;
-  width: 50px;
+  width: 200px;
+  height: auto;
   float: left;
-  margin: 10px 0 0 30px;
+  margin: auto 200px auto;
 }
 header h1 {
   text-align: center;
