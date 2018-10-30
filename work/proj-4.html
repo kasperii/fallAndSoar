@@ -15,7 +15,7 @@
   I began by making a sound system that instantiates a sound source between two objects. It does this by projecting the position of the camera (the player) onto the vector created between the two objects. I then restricted the sound source to move outside of the parameters of the two objects, as well as made it update according to the players position - making the sound source move with the player. I then rewrote the script to instead of taking in the two objects 3D coordinates, I took in a line renderers start and end position. What I had achieved here was a sound system with a sound source that moved along the line renderer according to the closest point to the player.
   The hardest part was to make the sound system instantiate multiple sound sources, while updating them according with the players movement. This was made by separating the script into two components, SoundController and SoundSource.
 </p>
-
+<iframe src="https://giphy.com/embed/8L1LdhniXPKDCX2WQw" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 <p>
   The SoundController script keeps track of the lasers indexes/positions in a 3D array (Vector3 array). It also instantiates a clone of the sound source prefab while at the same time giving the SoundSource script (attached to the prefab) the values of the 3D array as well as the designated index value. When the laser changes (an index is added or removed - as in adding or removing a mirror in our game) the controller adds/removes the designated sound source and updates all other sound sources with the new values.
 </p>
@@ -23,6 +23,8 @@
 <p>
   The SoundSoruce script is basically a math heavy script where it creates vectors between the laser indexes and the player. It then uses these vectors to calculates the projection onto the laser and to restrict the sound object from moving outside of the laser. So while the controller keeps track of most things, the SoundSource script only keeps track of itself, updating the position of the sound source according to the players position. The sound source itself is a 3D sound which vary in intensity by distance to the player.
 </p>
+
+<iframe src="https://giphy.com/embed/QmJ3s6QZwvJHTrm4DW" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 <p>
 
