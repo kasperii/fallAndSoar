@@ -1,9 +1,28 @@
-<p>pride netlight 2018</p>
-<img src="/img/work/pride/thumb.png" alt="pride logo">
+<p>
 
-<iframe src="https://player.vimeo.com/video/296274520" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/296274520">Pride snake</a> from <a href="https://vimeo.com/user70879634">Kasper Karlgren</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-<iframe src="https://player.vimeo.com/video/296274455" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/296274455">Pride spinn</a> from <a href="https://vimeo.com/user70879634">Kasper Karlgren</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-<iframe src="https://player.vimeo.com/video/296274614" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/296274614">Liquid letters</a> from <a href="https://vimeo.com/user70879634">Kasper Karlgren</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+  The following solution of a 3D sound system is the task I’ve spent most time on during the first half of the project.
+
+  Sound in real life originates from a single point and spreads in a sphere from the origin, where Unity’s sound system works in the same way. As we fully want to seize the capabilities that AR offers, we want to stray away from how we’re used to perceive these modalities in real life and instead focus on how we can enhance them in AR.
+
+  We wanted a ‘laser sound’ to travel along the line renderer of the raycast - that is our laser. In real life a laser wouldn’t emit sound, but we thought it would enhance our game if our did. So by rethinking sound and how it originates, I’ve created an adaptive 3D sound system from scratch. The system could be called a ‘volumetric’ sound system, as it functionally works in the same way. But instead of making a whole volume emit sound we make the point sound adapt along the player’s position. Let me explain by showing my process:
+
+  I began by making a sound system that instantiates a sound source between two objects. It does this by projecting the position of the camera (the player) onto the vector created between the two objects. I then restricted the sound source to move outside of the parameters of the two objects, as well as made it update according to the players position - making the sound source move with the player. I then rewrote the script to instead of taking in the two objects 3D coordinates, I took in a line renderers start and end position. What I had achieved here was a sound system with a sound source that moved along the line renderer according to the closest point to the player.
+  The hardest part was to make the sound system instantiate multiple sound sources, while updating them according with the players movement. This was made by separating the script into two components, SoundController and SoundSource.
+
+  The SoundController script keeps track of the lasers indexes/positions in a 3D array (Vector3 array). It also instantiates a clone of the sound source prefab while at the same time giving the SoundSource script (attached to the prefab) the values of the 3D array as well as the designated index value. When the laser changes (an index is added or removed - as in adding or removing a mirror in our game) the controller adds/removes the designated sound source and updates all other sound sources with the new values.
+
+  The SoundSoruce script is basically a math heavy script where it creates vectors between the laser indexes and the player. It then uses these vectors to calculates the projection onto the laser and to restrict the sound object from moving outside of the laser. So while the controller keeps track of most things, the SoundSource script only keeps track of itself, updating the position of the sound source according to the players position. The sound source itself is a 3D sound which vary in intensity by distance to the player.
+
+
+  By working on this solution I’ve learned to create and test in steps instead of trying to do all at once, resulting in much better workflow. Next thing is to integrate this solution into the main AR environment, which in theory only should be to import the scripts and source sound prefab, and attach the line renderer to the SoundController script. But If I’ve learned anything by now, it is that nothing works as intended the first time. By working on this code for a extended duration I’ve come to realize that you’re never done - there’s always something that can be improved. But at some point you have to stop, which is one of the larger learning takeaways for me.
+
+  To further justify my solution I must add that a line renderer can’t take on a mesh, making a sound system out of the volume of the mesh, a volumetric sound system, pointless. We could deliberately instantiate an object with a mesh onto the line renderer (same concept as how I instantiate the sound sources), making a volumetric system possible. But then we would need to make a volumetric sound system from scratch as the ones available online cost around 20 euros. The system I’ve created is much more scaled down, but works as intended for the use case we have, making it the perfect system!
+
+  In a paper by Schraffenberger and Heide (2016) they explore the role that multimodal and non-visual aspects can have when creating AR scenarios, and argue that multimodality is the norm rather than the exception in AR [2]. This view challenges the heavy focus on vision in AR that most research have, and is something we have taken into account in our project. By adding this adaptive 3D sound system along with other auditory and haptic feedback, our game can rely less on visual feedback while embracing the multimodal interactions.
+
+
+
+
+
+
+</p>
