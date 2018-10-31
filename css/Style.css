@@ -464,6 +464,10 @@ header::after {
   content: "";
   display: table;
 }
+header .filler {
+  height: 150px;
+  width: auto;
+}
 header .logo {
   height: 50px;
   width: 50px;
@@ -484,11 +488,11 @@ header nav a:hover {
 }
 header .logo-mid {
   display: inline-block;
-  width: 100%;
+  width: 200px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 150px;
+  margin-top: 5px;
 }
 header .logo-mid .text-svg {
   width: 200px;
