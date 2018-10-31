@@ -490,7 +490,7 @@ header .logo-mid {
   margin-right: auto;
   margin-top: 150px;
 }
-header .logo-mid img {
+header .logo-mid .text-svg {
   width: 200px;
   margin-left: auto;
   margin-right: auto;
