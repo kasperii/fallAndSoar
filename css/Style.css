@@ -492,7 +492,7 @@ header .logo-mid {
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5px;
+  margin-top: 150px;
 }
 header .logo-mid .text-svg {
   width: 200px;
@@ -537,7 +537,7 @@ header .kicker {
 }
 
 footer {
-  background: url(../img/backF.png) center center;
+  background: url(./img/backF.png) center center;
   background-size: cover;
 }
 footer::after {
@@ -574,19 +574,6 @@ footer .lockup .contentWrap a {
 }
 footer .lockup .contentWrap a:hover {
   color: rgba(255, 255, 255, 0.7);
-}
-
-about h3 {
-  color: black;
-  text-align: center;
-  padding: 100px 0 30px;
-}
-about .blurb {
-  max-width: 620px;
-  padding: 0 15px;
-  margin: 50px auto 50px;
-  font-size: 18px;
-  font-weight: 300;
 }
 
 about h3 {
@@ -638,12 +625,12 @@ about .face-lockup [class^=icon] {
 about .face-lockup [class^=icon]:hover {
   background: #00FFC6;
 }
-about .face-lockup [class^=icon] p {
-  text-align: center;
-}
 about .face-lockup [class^=icon] img {
   display: block;
   float: inherit;
+}
+about .face-lockup [class^=icon] p {
+  text-align: center;
 }
 about .face-lockup [class^=icon].icon1 {
   order: 1;
@@ -678,7 +665,7 @@ about .face-lockup [class^=icon].icon4 {
 about .blurb {
   max-width: 620px;
   padding: 0 15px;
-  margin: 50px auto 50px;
+  margin: 100px auto 50px;
   font-size: 18px;
   font-weight: 300;
 }
