@@ -455,8 +455,8 @@ h3, about h3, footer .lockup .contentWrap a, header nav a {
 }
 
 header {
-  height: 450px;
-  background: url(../img/background.png) center center;
+  height: 749px;
+  background: url(../img/backgroundwoCubbe.png) center center;
   background-size: cover;
 }
 header::after {
@@ -487,15 +487,14 @@ header nav a:hover {
   color: black;
 }
 header .logo-mid {
-  display: inline-block;
-  width: 200px;
+  width: 8%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 150px;
+  margin-top: 0px;
 }
 header .logo-mid .text-svg {
-  width: 200px;
+  width: auto;
   margin-left: auto;
   margin-right: auto;
 }
@@ -582,9 +581,14 @@ about h3 {
   padding: 100px 0 30px;
 }
 about .logo {
+  text-align: center;
   height: 200px;
   width: 200px;
-  padding: 50px 0 30px;
+  margin: 0 auto 0 auto;
+}
+about .logo img {
+  height: 200px;
+  width: 200px;
 }
 about .face-lockup {
   max-width: 780px;
