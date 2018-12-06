@@ -6,9 +6,6 @@ about
     text-align: center
     padding: 100px 0 30px
 
-  .logo
-    +size(200px)
-    padding: 50px 0 30px
   .face-lockup
     max-width: 780px
     +display(flex)

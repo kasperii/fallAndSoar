@@ -66,7 +66,7 @@ audio:not([controls]) {
 [hidden],
 template {
   display: none;
-}
+n}
 
 a {
   background-color: transparent;
@@ -580,11 +580,6 @@ about h3 {
   color: black;
   text-align: center;
   padding: 100px 0 30px;
-}
-about .logo {
-  height: 200px;
-  width: 200px;
-  padding: 50px 0 30px;
 }
 about .face-lockup {
   max-width: 780px;

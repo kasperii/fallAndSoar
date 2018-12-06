@@ -4,7 +4,7 @@
 
 <head>
     <title>
-        Soar & Fall
+        beBeam
     </title>
     <link rel="icon" href="./img/favicon-16x16.ico" type="image/vnd.microsoft.icon" />
 </head>
@@ -26,8 +26,8 @@
 <about>
 
  <h3 id="aboutMe"></h3>
+<img src="img/soarCube2.png">
 
-<a class="logo" href=""><img src="/images/soarCube2.png" alt="soar & fall - logo" /></a>
 
 
  <div class="blurb">
