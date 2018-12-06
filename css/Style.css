@@ -456,7 +456,7 @@ h3, about h3, footer .lockup .contentWrap a, header nav a {
 
 header {
   height: 450px;
-  background: url(../img/backG.jpg) center center;
+  background: url(../img/background.png) center center;
   background-size: cover;
 }
 header::after {
@@ -472,7 +472,7 @@ header .logo {
   height: 50px;
   width: 50px;
   float: left;
-  margin: 10px 0 0 30px;
+  margin: 10px 0px 0px 30px;
 }
 header nav {
   float: right;
@@ -537,7 +537,7 @@ header .kicker {
 }
 
 footer {
-  background: url(./img/backF.png) center center;
+  background: url(../img/backF.png) center center;
   background-size: cover;
 }
 footer::after {
