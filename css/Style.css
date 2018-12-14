@@ -381,7 +381,7 @@ header nav a, footer .lockup .contentWrap a, about h3, h3 {
 
 header {
   height: 749px;
-  background: url(../img/backgroundwoCubbe.png) center center;
+  background: url(../img/backG.png) center center;
   background-size: cover; }
   header::after {
     clear: both;
