@@ -445,7 +445,7 @@ header {
     color: white; }
 
 footer {
-  background: url(../img/backF.png) center center;
+  background: url(../img/backG.png) center center;
   background-size: cover; }
   footer::after {
     clear: both;
@@ -462,6 +462,9 @@ footer {
       width: 50px;
       float: left;
       margin-right: 30px; }
+      footer .lockup .logo .img {
+        height: 50px;
+        width: 50px; }
     footer .lockup .contentWrap {
       float: left; }
       footer .lockup .contentWrap .copyright {
