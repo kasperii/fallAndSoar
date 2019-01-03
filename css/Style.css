@@ -1,3 +1,12 @@
+h1 {
+  font-size: 16px; }
+
+h2 {
+  font-size: 16px; }
+
+p {
+  font-size: 16px; }
+
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
