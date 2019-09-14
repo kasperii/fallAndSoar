@@ -570,6 +570,8 @@ about .blurb {
   margin: 100px auto 50px;
   font-size: 18px;
   font-weight: 300; }
+  about .blurb iframe {
+    width: 100%; }
 about .videoclass {
   max-width: 640px;
   padding: 0 15px;
@@ -661,7 +663,7 @@ h3 {
         margin: 0px auto; }
       .thumb-container .thumb-unit .thumb-overlay strong {
         display: block;
-        padding: 0px 20px;
+        padding: 10px 20px;
         color: white;
         font-weight: 300;
         text-transform: uppercase;
